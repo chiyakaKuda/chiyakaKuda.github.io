@@ -281,4 +281,44 @@ p{
       font-size: 18px; /* Medium font size for animation text */
   }
 }
+@media (max-width: 480px) {
+  .animation .first {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px; /* Smaller padding */
+      margin: 4px; /* Smaller margin */
+  }
+
+  .animation .second {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px; /* Smaller padding */
+      margin: 4px; /* Smaller margin */
+  }
+
+  .animation .third {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px; /* Smaller padding */
+      margin: 4px; /* Smaller margin */
+  }
+}
+
+/* Tablets (landscape) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .animation .first {
+      font-size: 16px; /* Medium font size */
+      padding: 10px; /* Medium padding */
+      margin: 6px; /* Medium margin */
+  }
+
+  .animation .second {
+      font-size: 16px; /* Medium font size */
+      padding: 10px; /* Medium padding */
+      margin: 6px; /* Medium margin */
+  }
+
+  .animation .third {
+      font-size: 16px; /* Medium font size */
+      padding: 10px; /* Medium padding */
+      margin: 6px; /* Medium margin */
+  }
+}
 
