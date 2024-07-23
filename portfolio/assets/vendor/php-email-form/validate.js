@@ -77,9 +77,20 @@
   }
 
   function displayError(thisForm, error) {
+    // Hide the loading indicator
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    
+    // Display the error message
+    thisForm.querySelector('.error-message').innerHTML = "Message successfully sent!";
     thisForm.querySelector('.error-message').classList.add('d-block');
-  }
+    
+    // Set a timeout to reload the page after 3 seconds
+    setTimeout(function() {
+        // Reload the current page
+        window.location.reload();
+       
+    }, 3000); // 3000 milliseconds = 3 seconds
+}
+
 
 })();

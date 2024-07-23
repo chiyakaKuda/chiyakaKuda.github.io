@@ -8,8 +8,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/landing/me-logo.png" rel="icon">
-  <link href="/landing/me-logo.png" rel="apple-touch-icon">
+  <link href="/portfolio/landing/me-logo.png" rel="icon">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -468,30 +468,28 @@
         </div>
       </div>
 
-      <form id="contact-form" method="post" role="form" class="php-email-form mt-4">
+      <form action="https://formspree.io/f/movajwqk" method="POST" class="php-email-form mt-4" >
         <div class="row">
             <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
             </div>
-        </div>
-        <div class="form-group mt-3">
+          </div>
+          <div class="form-group mt-3">
             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
+          </div>
+          <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-            <div class="loading" style="display:none;">Loading</div>
-            <div class="error-message" style="display:none;color:red;"></div>
-            <div class="sent-message" style="display:none;color:green;">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn1">Send Message</button>
-        </div>
-    </form>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+</form>
     
    
     
@@ -509,35 +507,5 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var formData = new FormData(this);
-    
-        document.querySelector('.loading').style.display = 'block';
-        document.querySelector('.error-message').style.display = 'none';
-        document.querySelector('.sent-message').style.display = 'none';
-    
-        fetch('send_email.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector('.loading').style.display = 'none';
-            if (data.includes('Your message has been sent')) {
-                document.querySelector('.sent-message').style.display = 'block';
-            } else {
-                document.querySelector('.error-message').innerText = data;
-                document.querySelector('.error-message').style.display = 'block';
-            }
-        })
-        .catch(error => {
-            document.querySelector('.loading').style.display = 'none';
-            document.querySelector('.error-message').innerText = 'There was an error sending your message. Please try again later.';
-            document.querySelector('.error-message').style.display = 'block';
-        });
-    });
-    </script>
 </body>
 </html>
