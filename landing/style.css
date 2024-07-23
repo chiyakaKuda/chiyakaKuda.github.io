@@ -17,6 +17,19 @@ body, html {
     text-align: center;
     z-index: 1;
 }
+.favicon {
+  width: 64px; /* Adjust to your favicon size */
+  height: 64px;
+  background-color: white;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favicon img {
+  border-radius: 10%;
+}
 h2 {
     font-size: 4rem;
     color: transparent;
