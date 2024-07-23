@@ -249,13 +249,48 @@ p{
   .text-area h2 {
       font-size: 24px; /* Smaller font size for heading */
   }
-
+  .container {
+    font-size: 1.5rem; /* Adjusted font size for mobile */
+  }
   .container p {
       font-size: 16px; /* Smaller font size for container paragraph */
+  }
+  .animation {
+    height: 35px; /* Adjusted height for mobile */
   }
 
   .animation div {
       font-size: 16px; /* Smaller font size for animation text */
+  }
+  
+  .animation div:first-child {
+    animation: text-animation 8s infinite;
+  }
+  
+  .first div {
+    background-color:#3BBA9C;
+    
+  }
+  .second div {
+    background-color:#1B1A55;
+   
+  }
+  .third div {
+    background-color:#F5F5DC;
+    
+  }
+  
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.62rem;}
+    30% {margin-top: -5.62rem;}
+    40% {margin-top: -11.24rem;}
+    60% {margin-top: -11.24rem;}
+    70% {margin-top: -5.62rem;}
+    80% {margin-top: -5.62rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
   }
 }
 
@@ -281,44 +316,3 @@ p{
       font-size: 18px; /* Medium font size for animation text */
   }
 }
-@media (max-width: 480px) {
-  .animation .first {
-      font-size: 14px; /* Smaller font size */
-      padding: 8px; /* Smaller padding */
-      margin: 4px; /* Smaller margin */
-  }
-
-  .animation .second {
-      font-size: 14px; /* Smaller font size */
-      padding: 8px; /* Smaller padding */
-      margin: 4px; /* Smaller margin */
-  }
-
-  .animation .third {
-      font-size: 14px; /* Smaller font size */
-      padding: 8px; /* Smaller padding */
-      margin: 4px; /* Smaller margin */
-  }
-}
-
-/* Tablets (landscape) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .animation .first {
-      font-size: 16px; /* Medium font size */
-      padding: 10px; /* Medium padding */
-      margin: 6px; /* Medium margin */
-  }
-
-  .animation .second {
-      font-size: 16px; /* Medium font size */
-      padding: 10px; /* Medium padding */
-      margin: 6px; /* Medium margin */
-  }
-
-  .animation .third {
-      font-size: 16px; /* Medium font size */
-      padding: 10px; /* Medium padding */
-      margin: 6px; /* Medium margin */
-  }
-}
-
