@@ -1146,7 +1146,9 @@ section .container {
 .contact .php-email-form button[type=submit]:hover {
   background: #15bb62;
 }
-
+.btn1{
+  margin: 20px;
+}
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
